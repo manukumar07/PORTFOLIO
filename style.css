@@ -77,6 +77,18 @@ section{
 }
 .h_img img{
     width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem );
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 .home_content h3{
     font-size: 3.2rem;
@@ -97,8 +109,8 @@ span{
 .home_content p{
     font-size: 1.6rem;
 
-}
-.icons a{
+} 
+.icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -376,7 +388,16 @@ span{
     }
     section{
         padding: 10rem 3% 2rem;
-    }  
+    } 
+    .ser{
+        padding-bottom: 7rem;
+    } 
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
     .foot{
         padding: 2rem 3%;
     }  
@@ -394,5 +415,76 @@ span{
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar_main.active{
+        display: block;
+    }
+    .navbar_main a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home_content h3{
+        font-size: 2.6rem;
+    }
+    .home_content h1{
+        font-size: 4rem;
+    }
+    .h_img img{
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+    .abt{
+        flex-direction: column-reverse;
+
+    }
+    .abt img{
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+    .ser h2{
+        margin-bottom: 3rem;
+    }
+    .portfolio h2{
+        margin-bottom: 3rem;
+
+    }
+    .portfolio_contain{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:617px){
+    .portfolio_contain{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .input_box input{
+        width: 100%;
+    }
+}
+@media (max-width:365px){
+    .h_img img{
+        width: 90vw;
+    }
+    .abt_img img {
+        width: 90vw;
+    }
+    .foot{
+        flex-direction: column-reverse;
+    }
+    .foot p{
+        text-align: center;
+        margin-top: 2rem;
     }
 }
