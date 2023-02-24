@@ -38,6 +38,10 @@ section{
     justify-content: space-between;
     align-items: center;
 
+
+}
+.header1.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .3);
 }
 .logo{
     font-size: 2.5rem;
@@ -54,7 +58,8 @@ section{
 
 
 }
-.navbar_main a:hover,.navbar_main a.active {   
+.navbar_main a:hover,
+.navbar_main a.active {   
 
     color: var(--main-color);
 
@@ -200,4 +205,194 @@ span{
 .ser_box p {
     font-size: 1.6rem;
     margin:1rem 0 3 rem;
+}
+
+/* portfolio section */
+
+.portfolio{
+    background: var(--second-bg-color);
+
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+.portfolio_contain{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.portfolio_contain .portfolio_box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio_box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio_box:hover img{
+    transform: scale(1.2);
+}
+ .portfolio_box .portfolio_layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1)var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio_box:hover .portfolio_layer{
+    transform: translateY(0);
+
+}
+
+.portfolio_layer h4{
+    font-size: 4rem;
+
+}
+
+.portfolio_layer p{
+    font-size: 2rem;
+    margin: .3rem 0 1rem;
+
+}
+
+.portfolio_layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+
+}
+.portfolio_layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+
+}
+
+
+/* contact me page style */
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+.contact form .input_box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input_box input,
+.contact form textarea{
+            width: 100%;
+            padding: 1.6rem;
+            font-size: 1.7rem;
+            color: var(--text-color);
+            background: var(--second-bg-color);
+            border-radius: .8rem;
+            margin: .7rem 0;
+
+}
+
+.contact form .input_box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* footer jvnklddbmz */
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+
+}
+.foot_text{
+    font-size: 1.8rem;
+
+}
+.foot_icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.foot_icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+.foot_icon a i{
+    font-size: 2.5rem;
+    color: var(--second-bg-color);
+
+}
+
+
+/* breakpoints */
+@media (max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:991px) {
+    .header1{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }  
+    .foot{
+        padding: 2rem 3%;
+    }  
+}
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar_main{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
 }
